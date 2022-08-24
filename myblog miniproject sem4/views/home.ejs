@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <%- include(`./partials/head.ejs`)  %>
+<body>
+    <%- include(`./partials/navbar.ejs`)  %>
+    <%- include(`./partials/buttons.ejs`)  %>
+    
+    <div class="blog-list content">
+        <div class="top-section">
+            <i><div class="heading-top-section"><p>Style Trends of 2020</p></div></i>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. The Pali-Aike volcanic field is a volcanic field in Argentina that straddles the border with</p>
+        </div>
+        <h1>All Blogs</h1>
+        <div class="blcontainer">
+            <% if (blogs.length > 0){ %>
+                <% blogs.forEach(blog=>{ %>
+                    <div class="blog-preview">
+                        <div class="jumbotron">
+                            <h3 class="cat"><%= blog.Category %></h3>
+                            <h2 class="display-4"><%= blog.title %></h2>
+                            <hr class=""my-4/>
+                            <p class="lead"><%= blog.Description %></p>
+                            <a class="btn btn-primary btn-lg" href="/blogs/<%=blog.id%>" role="button">Read More</a>                        </div>
+                    </div>
+                    <% }) %>
+                <% }else{ %>
+                    <p>There are no blogs to display...</p>
+                <% } %>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <%- include(`./partials/head.ejs`)  %>
+<body>
+        <%- include(`./partials/buttons.ejs`)  %>
+    <div class="create-blog content">
+        
+        <div class="create">
+            <h2>Add a new Blog</h2>
+            <form action="/blogs" method="post">
+                <label for="title">Blog title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="author">Blog author:</label>
+                <input type="text" id="author" name="author" required>
+                <label for="Description">Blog Description:</label>
+                <input type="text" id="Description" name="Description" required>
+                <label for="author">Blog Body:</label>
+                <textarea id="body" name="body" required></textarea>
+                <label for="Category">Blog Category:</label>
+                <input type="text" id="Category" name="Category" required>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
