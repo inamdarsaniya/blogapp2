@@ -5,7 +5,7 @@ const mongoose=require('mongoose');
 const Blog=require('./models/blog');
 
 //connect to mongodb
-const dbURI=`mongodb+srv://user2:revision1234@cluster0.hrfvn.mongodb.net/blogdatabase?retryWrites=true&w=majority`;
+const dbURI=`mongodb+srv://user2:password@cluster0.hrfvn.mongodb.net/blogdatabase?retryWrites=true&w=majority`;
 mongoose.connect(dbURI)
     .then((result)=> {
         app.listen(3000)
